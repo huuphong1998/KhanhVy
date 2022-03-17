@@ -1,0 +1,66 @@
+.homepage {
+    .slider {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        --fzTitle: 48px;
+        --fzDes: 22px;
+
+        .container-fuild {
+            display: flex;
+            position: relative;
+
+            .slider__icon {
+                position: absolute;
+                z-index: 1;
+                height: 100%;
+                display: flex;
+                cursor: pointer;
+
+                &.--next {
+                    right: 0;
+                }
+            }
+
+            .slider__item {
+                width: 100%;
+                height: 470px;
+
+                &-wrap {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    &--text {
+                        height: 100%;
+                        text-align: center;
+                        position: absolute;
+                        z-index: 10;
+                        padding: 60px 0px 0px 260px;
+
+                        .description {
+                            @include text(var(--fzDes), $font-normal, normal, #004c81, none);
+                            max-width: 630px;
+                            font-weight: 600;
+                            letter-spacing: -1px;
+                            padding: 10px 0 20px;
+                        }
+                    }
+
+                    &--image {
+                        width: 100%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

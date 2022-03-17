@@ -1,0 +1,33 @@
+.payment {
+    background: #ebebeb;
+    padding: 25px 0;
+
+    .container {
+        display: flex;
+
+        .payment__icon {
+            display: flex;
+            cursor: pointer;
+        }
+
+        .payment__image {
+            display: flex;
+            width: 100%;
+
+            img {
+                max-width: initial;
+                height: 90px;
+                padding: 0 10px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                -webkit-transition: opacity 0.3s;
+
+                &.flickity-lazyloaded {
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                    -webkit-transition: opacity 0.3s;
+                }
+            }
+        }
+    }
+}

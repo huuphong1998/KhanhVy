@@ -1,0 +1,127 @@
+.products {
+    background: #ebebeb;
+
+    .container {
+        display: flex;
+        padding: 60px 0 70px;
+
+        .products__category {
+            width: 250px;
+
+            &-title {
+                background: #0072bc;
+
+                th {
+                    @include text(18px, $font-bold, normal, #ffffff, uppercase);
+                    padding: 10px 45px;
+                }
+            }
+
+            &-item {
+                background: #ffffff;
+
+                td {
+                    width: 100%;
+                    display: flex;
+                    padding: 10px 30px;
+                    position: relative;
+
+                    img {
+                        margin: 10px;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        @include text(17px, $font-normal, normal, #171717, uppercase);
+                        font-weight: 600;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 210px;
+                        height: 1px;
+                        background: #d8d8d8;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .pdtop {
+                    padding-top: 20px;
+                }
+
+                &.--height {
+                    height: 48px;
+                }
+            }
+        }
+
+        .products__hot {
+            display: flex;
+            padding-left: 50px;
+            position: relative;
+
+            &-icon {
+                display: flex;
+                cursor: pointer;
+                padding-top: 100px;
+
+                .prev-product {
+                    padding-right: 15px;
+                }
+
+                .next-product {
+                    padding-left: 30px;
+                }
+            }
+
+            &-slide {
+                display: none;
+                padding-top: 90px;
+
+                &.active {
+                    display: flex;
+                }
+
+                &--image {
+                    width: 350px;
+
+                    .imgproducts {
+                        width: 100%;
+                    }
+                }
+
+                &--text {
+                    padding-left: 30px;
+                    padding-top: 10px;
+
+                    .title-slide {
+                        @include text(17px, $font-normal, normal, #434343, uppercase);
+                        font-weight: 600;
+                    }
+
+                    .des-slide {
+                        @include text(15px, $font-normal, normal, #434343, none);
+                        padding: 7px 0;
+                        max-width: 350px;
+                        line-height: 24px;
+                    }
+
+                    .price {
+                        font-size: 16px;
+                        font-family: 'mb';
+                        color: #171717;
+                        padding-bottom: 20px;
+
+                        &__contact {
+                            color: #d00000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

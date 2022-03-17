@@ -1,0 +1,184 @@
+header {
+    --heightHeader: 190px;
+    height: var(--heightHeader);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    .container-fuild {
+        height: 100%;
+
+        .header__top {
+            height: 150px;
+            @include midflex-between();
+            background: #009ce1;
+            padding: 0 80px;
+
+            .logo {
+                padding-top: 40px;
+                z-index: 1;
+
+                &__img {
+                    width: 195px;
+                    height: 160px;
+                    background: #ffffff;
+                    position: relative;
+
+                    img {
+                        @include mid();
+                    }
+                }
+            }
+
+            .name-address {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .name {
+                    @include text(45px, $font-bold, normal, #ffdd15, uppercase);
+                    text-shadow: 4px 3px 4px $black-cl;
+                }
+
+                .address {
+                    @include text(24px, $font-bold, normal, #ffdd15, normal);
+                    text-shadow: 2px 2px 4px $black-cl;
+                }
+            }
+
+            .hotline {
+                display: flex;
+
+                &__text {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+                    padding-left: 5px;
+
+                    &-normal {
+                        @include text(16px, $font-normal, normal, #ffffff, upppercase);
+                    }
+
+                    &-bold {
+                        @include text(32px, $font-bold, normal, #ffdd15, upppercase);
+                    }
+                }
+            }
+        }
+
+        .header__bottom {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            position: relative;
+            background-image: linear-gradient(to top, #bdcde2 35%, #f5fafd 50%);
+
+            .menu {
+                width: 100%;
+                @include midflex();
+
+                li {
+                    padding: 0 15px;
+
+                    a {
+                        @include text(16px, $font-bold, normal, #000000, upppercase);
+                        transition: 0.4s;
+
+                        &.color {
+                            color: #0066ae;
+                            transition: 0.4s;
+                        }
+                    }
+                }
+            }
+
+            .input-search {
+                display: flex;
+                position: absolute;
+                right: 0;
+                margin-right: 83px;
+                height: 100%;
+                align-items: center;
+
+                .search {
+                    height: 30px;
+                    border: none;
+                    outline: none;
+                    border-radius: 3px;
+                    padding: 5px 0px 5px 10px;
+                    box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+                    -webkit-box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+
+                    &::placeholder {
+                        font-size: 10px;
+                    }
+                }
+
+                .icon-search {
+                    position: absolute;
+                    right: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            &.fixed {
+                position: fixed;
+                top: 0;
+                z-index: 100;
+            }
+        }
+    }
+
+    @include tablet {
+        .container-fuild {
+            .header__top {
+                height: 130px;
+                padding: initial;
+
+                .logo {
+                    padding-top: initial;
+                    z-index: initial;
+
+                    &__img {
+                        width: 150px;
+                        height: 130px;
+                    }
+                }
+
+                .name-address {
+                    .name {
+                        font-size: 27px;
+                    }
+
+                    .address {
+                        font-size: 18px;
+                    }
+                }
+
+                .hotline {
+                    padding-right: 10px;
+
+                    &__icon {
+                        display: flex;
+
+                        img {
+                            width: 40px;
+                        }
+                    }
+
+                    &__text {
+                        &-normal {
+                            font-size: 14px;
+                        }
+
+                        &-bold {
+                            font-size: 27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

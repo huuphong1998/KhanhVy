@@ -1,0 +1,117 @@
+.work-process {
+    background-image: url(../../../img/img-process.jpg);
+
+    .process__text {
+        text-align: center;
+        padding-top: 65px;
+
+        &-des {
+            @include text(18px, $font-normal, normal, #ffffff, none);
+        }
+    }
+
+    .process__circle {
+        display: flex;
+        padding: 40px 0 90px;
+
+        &-item {
+            display: flex;
+
+            &--content {
+                @include text(20px, $font-bold, normal, #ffffff, uppercase);
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                background: #555555;
+                @include midflex();
+                text-align: center;
+                padding: 28px;
+                cursor: pointer;
+
+                &.active {
+                    background: #0072bc;
+                }
+            }
+
+            &--image {
+                display: flex;
+                padding: 0 4px;
+            }
+        }
+    }
+
+    .process__step {
+        padding-bottom: 85px;
+
+        #process__step-bar {
+            width: 100%;
+            height: 7px;
+
+            &::-webkit-progress-value {
+                background: #049dfe;
+                transition: all 0.4s ease-in-out;
+            }
+
+            &::-webkit-progress-bar {
+                border-radius: 7px;
+            }
+        }
+
+        &-number {
+            display: flex;
+
+            &--item {
+                position: relative;
+
+                &.item1 {
+                    left: 60px;
+                }
+
+                &.item2 {
+                    left: 252px;
+                }
+
+                &.item3 {
+                    left: 444px;
+                }
+
+                &.item4 {
+                    left: 636px;
+                }
+
+                &.item5 {
+                    left: 828px;
+                }
+
+                &.item6 {
+                    left: 1020px;
+                }
+
+                span {
+                    @include text(36px, $font-bold, normal, #ffffff, uppercase);
+                    position: absolute;
+                    bottom: 5px;
+                }
+
+                .circle {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    background: #ffffff;
+                    border-radius: 100%;
+                    cursor: pointer;
+
+                    &-blue {
+                        &.active {
+                            width: 20px;
+                            height: 20px;
+                            background: #0072bc;
+                            border-radius: 50%;
+                            @include mid();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.intro {
+    .container {
+        display: flex;
+
+        .item1 {
+            @include text(30px, $font-bold, normal, #000000, uppercase);
+            height: 120px;
+            text-align: center;
+
+            span {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 15px;
+            }
+        }
+
+        .intro__item {
+            padding: 0 40px 0 20px;
+
+            &-info {
+                padding: 10px 0 20px;
+                @include text(17px, $font-normal, normal, #383838, none);
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+            &-des {
+                @include text(15px, $font-normal, normal, #434343, none);
+                line-height: 24px;
+            }
+        }
+
+        .item2 {
+            width: 120px;
+            @include midflex();
+            padding: 7px 0;
+            margin-top: 20px;
+
+            span {
+                @include text(14px, $font-bold, normal, #000000, uppercase);
+            }
+
+            i {
+                .icon-intro {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .intro__image {
+            min-width: 500px;
+        }
+    }
+}

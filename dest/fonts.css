@@ -1,0 +1,33 @@
+/* @font-face {
+    font-family: "mb";
+    src: url("../fonts/MyriadPro-Bold.woff2") format("woff2"), url("../fonts/MyriadPro-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "mbs";
+    src: url("../fonts/MyriadPro-BlackSemiCn.woff2") format("woff2"),
+        url("../fonts/MyriadPro-BlackSemiCn.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+} */
+
+@font-face {
+    font-family: "mr";
+    src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'mb';
+    src: url('../fonts/MyriadPro-BlackCond.woff2') format('woff2'),
+        url('../fonts/MyriadPro-BlackCond.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}

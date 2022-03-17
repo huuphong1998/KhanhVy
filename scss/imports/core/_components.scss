@@ -1,0 +1,99 @@
+.titlemain {
+    --fzTitle: 45px;
+    @include text(var(--fzTitle), $font-bold, normal, #004c81, uppercase);
+
+    &.red {
+        color: #cd000e;
+    }
+
+    &.white {
+        font-size: 36px;
+        color: #ffffff;
+        padding-bottom: 5px
+    }
+}
+
+.titlesub {
+    text-align: center;
+    @include text(27px, $font-bold, normal, #171717, uppercase);
+    position: absolute;
+    padding-bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before {
+        content: "";
+        width: 80px;
+        height: 2px;
+        background: #0072bc;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::after {
+        content: "";
+        width: 80px;
+        height: 2px;
+        background: #0072bc;
+        position: absolute;
+        bottom: -3px;
+        left: 60%;
+        transform: translateX(-50%);
+    }
+
+    &.black {
+        position: relative;
+        left: initial;
+        transform: initial;
+        padding-bottom: 7px;
+
+        &::after {
+            bottom: -3px;
+            left: 51%;
+        }
+    }
+}
+
+.titlenews {
+    @include text(16px, $font-normal, normal, #2f2f2f, none);
+    padding-bottom: 5px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.--fztitle {
+        font-size: 15px;
+    }
+}
+
+.desnews {
+    @include text(15px, $font-normal, 24px, #111111, none);
+
+    &.--width {
+        width: 360px;
+    }
+
+    &.--fzdes {
+        font-size: 14px;
+    }
+
+    &.--mwidth {
+        max-width: 400px;
+    }
+}
+
+.titlenews-main {
+    @include text(24px, $font-bold, normal, #1c1c1c, uppercase);
+    padding-bottom: 15px;
+
+    &.pdbottom {
+        padding-bottom: initial;
+    }
+}
+
+.titlefooter {
+    @include text(15px, $font-normal, normal, #ffffff, uppercase);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
